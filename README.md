@@ -1,7 +1,5 @@
 # Wk2 Code Challenge - Interactive Shopping List
 
-**NOTE: THIS IS THE STARTER CODE FOR THIS CODE CHALLENGE. FOR THE COMPLETE CODE, GO TO THE `complete_code` branch.**
-
 ## Objectives
 
 Develop a webpage with a shopping list. Users can add items to the list, mark items as purchased, and clear the list.
@@ -74,11 +72,21 @@ To use this repo, follow these steps:
 
 - Click [HERE](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) to install the Live Server extension and to read instructions on how to use it.
 
-- Implement the JavaScript functionality described at the start of this file.
+## Functionality
+
+- The shopping list is initially empty. Add items to it using the input field and clicking on the `Add Items` button.
+
+- Click on an item to mark it as already purchased.
+
+- Double click on an item to edit it.
+
+- Click on the `Clear List` button to clear your shopping list.
 
 ## Authors
 
-[Bob Oyier](https://github.com/oyieroyier/)
+This project was contributed to by:
+
+- [Bob Oyier](https://github.com/oyieroyier/)
 
 ## License
 
