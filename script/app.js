@@ -50,4 +50,6 @@ function addItem(event) {
 	shoppingList.push(event.target[0].value);
 
 	displayItems();
+
+	event.target.reset();
 }
