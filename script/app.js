@@ -53,3 +53,11 @@ function addItem(event) {
 
 	event.target.reset();
 }
+
+const deleteButton = select('.delete');
+listen(deleteButton, 'click', clearList);
+
+function clearList() {
+	shoppingList.length = 0;
+	displayItems();
+}
