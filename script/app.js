@@ -53,7 +53,8 @@ function createAListItem(item, index) {
 		li.focus();
 	}
 
-	// Listen when the item is not in focus and stop editing. This could happen when the cursor is clicked outside the list item or when (as will be done with the keydown listener, when a user hits "Enter")
+	// Listen when the item is not in focus and stop editing.
+	// This could happen when the cursor is clicked outside the list item or when(as will be done with the implementation of the keydown listener, when a user hits "Enter")
 	listen(li, 'blur', stopEditingTheItem);
 
 	function stopEditingTheItem() {
@@ -89,47 +90,6 @@ const deleteButton = select('.delete');
 listen(deleteButton, 'click', clearList);
 
 function clearList() {
-	shoppingList.length = 0;
-	displayItems();
-}
-
-// ADVANCED TASKS: LocalStorage usage.
-
-// ADVANCED TASK 1: Save the initial empty shopping list array to localStorage immediately the DOM loads.
-/* 
-	 If you want to use this code, add the following line where the DOM Content loads:
-
-
-	listen(document, 'DOMContentLoaded', saveList); 
-*/
-function saveList() {
-	localStorage.setItem('shoppingListItems', JSON.stringify(shoppingList));
-}
-
-// ADVANCED TASK 2: Load the shopping list from localStorage
-/*
-	 If you want to use this code, uncomment the last line inside this comment and comment out the displayItems event listener where the DOM Content loads.
-
-	listen(document, 'DOMContentLoaded', loadList);
-*/
-function loadList() {
-	const savedList = localStorage.getItem('shoppingListItems');
-	if (savedList) {
-		shoppingList = JSON.parse(savedList);
-		displayItems();
-	}
-}
-
-// ADVANCED TASK: Delete the list from localStorage
-/*
-
-	 If you want to use this code, replace the line setting the delete button's click event handler/callback `clearList() with the one below:
-	 
-	 listen(deleteButton, 'click', deleteList);
-
-*/
-function deleteList() {
-	localStorage.removeItem('shoppingListItems');
 	shoppingList.length = 0;
 	displayItems();
 }
